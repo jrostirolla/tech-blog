@@ -1,0 +1,43 @@
+[
+{
+    "title": "Test Title 1",
+    "body": "This data is a sample",
+    "user_id": 1
+}, {
+    "title": "Test Title 2",
+    "body": "This data is a sample, but even longer",
+    "user_id": 1
+}, {
+    "title": "Test Title 3",
+    "body": "This data is a sample, but even longer than the last one",
+    "user_id": 2
+}, {
+    "title": "Test Title 4",
+    "body": "This data is a sample, but even LONGER than the last few that were in this file",
+    "user_id": 2
+}, {
+    "title": "Test Title 5",
+    "body": "This data is a sample, but I think you will find this one the longest so far, as I kept running out of things to type",
+    "user_id": 3
+}, {
+    "title": "Test Title 6",
+    "body": "I got bored of the old text, so this is some new stuff",
+    "user_id": 3
+}, {
+    "title": "Test Title 7",
+    "body": "Why'd the chicked cross the road?",
+    "user_id": 1
+}, {
+    "title": "Test Title 8",
+    "body": "To be or not to be, that is the question",
+    "user_id": 3
+}, {
+    "title": "Test Title 9",
+    "body": "This data is a sample",
+    "user_id": 2
+}, {
+    "title": "Test Title 10",
+    "body": "I am a big jerk and everyone should worship me, for I am the GOD OF CODE!",
+    "user_id": 4
+}
+]
