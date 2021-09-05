@@ -1,6 +1,46 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Blogpost, Comment } = require('../../models');
 
+//find users page
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.param.id, {
+      include: [{
+        model: Blogpost,
+        attributes: ['id', 'title', 'body', 'date_created']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'content', 'date_created']
+      }]
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
+
+//find all users
+router.get('/', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [{
+        model: Blogpost,
+        attributes: ['id', 'title', 'body', 'date_created']
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'content', 'date_created']
+      }]
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
+
+
+//create new account
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -17,6 +57,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//login route
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -49,6 +90,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+//logout route
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

@@ -1,0 +1,38 @@
+[
+    {
+        "content": "This post sucks!",
+        "post_id": 7
+    }, 
+    {
+        "content": "This post ROCKS!",
+        "post_id": 3
+    },     
+    {
+        "content": "This post is meh!",
+        "post_id": 2
+    }, 
+    {
+        "content": "This post cool!",
+        "post_id": 1
+    }, 
+    {
+        "content": "This post rad!",
+        "post_id": 3
+    }, 
+    {
+        "content": "This post bad!",
+        "post_id": 2
+    }, 
+    {
+        "content": "This post mediocre!",
+        "post_id": 5
+    }, 
+    {
+        "content": "This post should be left in the dumpsterS!",
+        "post_id": 6
+    }, 
+    {
+        "content": "This post is dumb!",
+        "post_id": 7
+    }
+]
