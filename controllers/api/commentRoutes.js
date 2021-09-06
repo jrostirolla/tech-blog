@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //get all comments for a post
-router.get('/', async (req, res) => {
+router.get('/comment_all', async (req, res) => {
   try {
     const newComment = await Comment.findAll({
       ...req.body,
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 //delete a comment from a post
-router.delete('/:id', async (req, res) => {
+router.delete('/comment/:id', async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {

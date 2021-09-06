@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Blogpost, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //find users page
-router.get('/:id', async (req, res) => {
+router.get('/user/:id', async (req, res) => {
   try {
     const userData = await User.findByPk(req.param.id, {
       include: [{
@@ -21,7 +22,7 @@ router.get('/:id', async (req, res) => {
 })
 
 //find all users
-router.get('/', async (req, res) => {
+router.get('/users_all', async (req, res) => {
   try {
     const userData = await User.findAll({
       include: [{
@@ -41,7 +42,7 @@ router.get('/', async (req, res) => {
 
 
 //create new account
-router.post('/', async (req, res) => {
+router.post('/new_user', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
