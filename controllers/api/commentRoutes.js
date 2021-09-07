@@ -3,7 +3,7 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //get all comments for a post
-router.get('/comment_all', async (req, res) => {
+router.get('/blogpost/comment_all', async (req, res) => {
   try {
     const newComment = await Comment.findAll({
       ...req.body,
@@ -17,7 +17,7 @@ router.get('/comment_all', async (req, res) => {
 });
 
 //delete a comment from a post
-router.delete('/comment/:id', async (req, res) => {
+router.delete('/blogpost/comment/:id', async (req, res) => {
   try {
     const commentData = await Comment.destroy({
       where: {

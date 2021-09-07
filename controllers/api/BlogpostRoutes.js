@@ -49,7 +49,7 @@ router.post('/blogpost', async (req, res) => {
 });
 
 //delete post
-router.delete('/blockpost/:id', async (req, res) => {
+router.delete('/blogpost/:id', async (req, res) => {
   try {
     const blogpostData = await Blogpost.destroy({
       where: {

@@ -18,14 +18,14 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNullL: false,
+      allowNull: false,
       validate: {
         isEmail: true
       }
     },
      password: {
       type:DataTypes.STRING,
-      allowNullL: false,
+      allowNull: false,
       validate: {
         len: [8],
       }
